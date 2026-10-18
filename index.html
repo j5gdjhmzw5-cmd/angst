@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehr Sicherheit – Verlustangst verstehen</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f3ef;
+      color: #30352f;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #dce8dc;
+      text-align: center;
+      padding: 65px 20px;
+    }
+
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      max-width: 550px;
+      margin: auto;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 25px 18px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 15px #00000008;
+    }
+
+    h2 {
+      color: #536c59;
+    }
+
+    .satz {
+      background: #f3e8dd;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 19px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    button {
+      background: #627c67;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 18px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    button:hover {
+      background: #455d4a;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font: inherit;
+      margin: 10px 0;
+    }
+
+    .kreis {
+      width: 110px;
+      height: 110px;
+      margin: 20px auto;
+      background: #c5d7c7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: transform 4s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Du bist sicher bei dir. 🌿</h1>
+  <p>
+    Du darfst jemanden lieben, ohne ständig Angst haben zu müssen,
+    ihn zu verlieren. Lerne, dir selbst mehr Sicherheit zu geben.
+  </p>
+</header>
+
+<main>
+
+  <section>
+    <h2>🤍 Wenn die Verlustangst kommt</h2>
+
+    <p>
+      Du musst jetzt nichts erzwingen und nichts sofort klären.
+      Atme kurz durch und erinnere dich daran:
+      Ein Gefühl ist nicht automatisch eine Tatsache.
+    </p>
+
+    <div class="satz" id="beruhigung">
+      Ich bin gerade unsicher, aber ich bin nicht hilflos.
+      Ich darf durchatmen. Ich muss nicht aus Angst handeln.
+      Nicht jeder Abstand bedeutet Verlust.
+    </div>
+
+    <button onclick="neuerSatz()">
+      Einen anderen Satz anzeigen
+    </button>
+  </section>
+
+  <section>
+    <h2>🌬️ Gemeinsam durchatmen</h2>
+
+    <p>
+      Atme sanft ein und langsam wieder aus.
+      Du musst deinen Atem nicht erzwingen.
+    </p>
+
+    <div class="kreis" id="kreis">Bereit?</div>
+
+    <p id="atemText">Nimm dir einen ruhigen Moment.</p>
+
+    <button onclick="atemUebung()" id="atemKnopf">
+      Atemübung starten
+    </button>
+  </section>
+
+  <section>
+    <h2>🧠 Meine Gedanken verstehen</h2>
+
+    <p>Was beschäftigt dich gerade?</p>
+
+    <label for="angst">Wovor habe ich Angst?</label>
+    <textarea id="angst"
+      placeholder="Schreibe deine Gedanken auf ..."></textarea>
+
+    <label for="fakten">Was weiß ich wirklich?</label>
+    <textarea id="fakten"
+      placeholder="Was sind Fakten und was sind Vermutungen?"></textarea>
+
+    <label for="hilfe">Was würde mir jetzt helfen?</label>
+    <textarea id="hilfe"
+      placeholder="Was brauche ich gerade?"></textarea>
+
+    <button onclick="gedankenOrdnen()">
+      Meine Gedanken ordnen
+    </button>
+
+    <p id="ergebnis"></p>
+  </section>
+
+  <section>
+    <h2>🌱 Kleine Schritte zu mehr Vertrauen</h2>
+
+    <p>
+      Du musst nicht alles auf einmal schaffen.
+      Wähle jeden Tag einen kleinen Schritt.
+    </p>
+
+    <label>
+      <input type="checkbox">
+      Ich warte kurz, bevor ich aus Angst eine Nachricht schreibe.
+    </label>
+    <br>
+
+    <label>
+      <input type="checkbox">
+      Ich nehme mir Zeit für meine eigenen Interessen.
+    </label>
+    <br>
+
+    <label>
+      <input type="checkbox">
+      Ich spreche offen über meine Gefühle.
+    </label>
+    <br>
+
+    <label>
+      <input type="checkbox">
+      Ich versuche, nicht jede Situation negativ zu deuten.
+    </label>
+    <br>
+
+    <label>
+      <input type="checkbox">
+      Ich erinnere mich an meinen eigenen Wert.
+    </label>
+  </section>
+
+  <section>
+    <h2>💚 Das darfst du dir sagen</h2>
+
+    <div class="satz">
+      Ich darf jemanden mögen und trotzdem ich selbst bleiben.
+      Ich muss nicht ständig beweisen, dass ich liebenswert bin.
+      Ich kann Vertrauen langsam wachsen lassen.
+      Ich bin es wert, respektvoll behandelt zu werden.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Du musst nicht alles heute lösen. Ein kleiner Schritt zählt. 🌿
+</footer>
+
+<script>
+  const saetze = [
+    "Ich bin gerade unsicher, aber ich muss nicht aus Angst handeln.",
+    "Ich darf jemanden mögen und trotzdem auf mich selbst achten.",
+    "Ich kenne nicht alle Antworten und muss sie nicht sofort haben.",
+    "Meine Angst ist ein Gefühl, kein Beweis dafür, dass etwas Schlimmes passiert.",
+    "Ich darf Vertrauen langsam aufbauen.",
+    "Ich kann Unsicherheit aushalten und freundlich mit mir bleiben."
+  ];
+
+  let satzIndex = 0;
+
+  function neuerSatz() {
+    satzIndex = (satzIndex + 1) % saetze.length;
+
+    document.getElementById("beruhigung").textContent =
+      saetze[satzIndex];
+  }
+
+  let atemAktiv = false;
+  let atemTimer;
+
+  function atemUebung() {
+    const kreis = document.getElementById("kreis");
+    const text = document.getElementById("atemText");
+    const knopf = document.getElementById("atemKnopf");
+
+    if (atemAktiv) {
+      atemAktiv = false;
+      clearTimeout(atemTimer);
+      kreis.style.transform = "scale(1)";
+      kreis.textContent = "Pause";
+      text.textContent = "Du kannst jederzeit aufhören.";
+      knopf.textContent = "Erneut starten";
+      return;
+    }
+
+    atemAktiv = true;
+    knopf.textContent = "Übung beenden";
+
+    function atmen() {
+      if (!atemAktiv) return;
+
+      kreis.style.transform = "scale(1.15)";
+      kreis.textContent = "Einatmen";
+      text.textContent = "Atme sanft ein.";
+
+      atemTimer = setTimeout(() => {
+        if (!atemAktiv) return;
+
+        kreis.style.transform = "scale(0.9)";
+        kreis.textContent = "Ausatmen";
+        text.textContent = "Atme langsam wieder aus.";
+
+        atemTimer = setTimeout(atmen, 6000);
+      }, 4000);
+    }
+
+    atmen();
+  }
+
+  function gedankenOrdnen() {
+    const angst = document.getElementById("angst").value;
+    const fakten = document.getElementById("fakten").value;
+    const hilfe = document.getElementById("hilfe").value;
+
+    document.getElementById("ergebnis").textContent =
+      "Meine Gedanken:\n\n" +
+      "Meine Angst: " + (angst || "Noch nicht aufgeschrieben") +
+      "\n\nWas ich wirklich weiß: " +
+      (fakten || "Das darf ich noch herausfinden.") +
+      "\n\nWas mir helfen könnte: " +
+      (hilfe || "Ich darf mir Zeit nehmen.") +
+      "\n\nIch muss nicht sofort reagieren. Ich darf ruhig bleiben und Schritt für Schritt entscheiden.";
+  }
+</script>
+
+</body>
+</html>
